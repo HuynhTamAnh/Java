@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Main {
     public static void main(String[] args) {
         System.out.println("Tôi sẽ giải đáp các câu hỏi của bạn về Java:\n" +
@@ -89,5 +90,32 @@ public class Main {
                 "- Đối tượng: Lập trình viên phát triển ứng dụng cho thiết bị có tài nguyên hạn chế\n" +
                 "\n" +
                 "Các phiên bản này được thiết kế để đáp ứng các nhu cầu khác nhau từ thiết bị nhỏ đến hệ thống doanh nghiệp lớn, cho phép Java trở thành một nền tảng linh hoạt và toàn diện.");
+=======
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập số tháng (1-12): ");
+        int month = scanner.nextInt();
+
+        switch (month) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                System.out.println("Tháng " + month + " có 31 ngày.");
+                break;
+            case 4: case 6: case 9: case 11:
+                System.out.println("Tháng " + month + " có 30 ngày.");
+                break;
+            case 2:
+                System.out.println("Tháng 2 có 28 hoặc 29 ngày.");
+                break;
+            default:
+                System.out.println("Tháng không hợp lệ.");
+                break;
+        }
+
+        scanner.close();
+>>>>>>> 5830f00f22a74faa1f8a6324a3dc07ae54803b31
     }
 }
